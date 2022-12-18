@@ -4,7 +4,6 @@ import com.oracle.fibonacci.config.DropWizardConfiguration;
 import com.oracle.fibonacci.health.ApplicationHealthCheck;
 import com.oracle.fibonacci.resources.FibonacciResource;
 import io.dropwizard.Application;
-import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
