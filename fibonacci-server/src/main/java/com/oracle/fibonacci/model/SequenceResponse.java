@@ -1,19 +1,19 @@
-package com.oracle.fibonacci.api;
+package com.oracle.fibonacci.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public class Sequence {
+public class SequenceResponse {
 
     List<Integer> fibonacci;
     List<Integer> sorted;
 
-    public Sequence() {
+    public SequenceResponse() {
         // Jackson deserialization
     }
 
-    public Sequence(List<Integer> fibonacci, List<Integer> sorted) {
+    public SequenceResponse(List<Integer> fibonacci, List<Integer> sorted) {
         this.fibonacci = fibonacci;
         this.sorted = sorted;
     }

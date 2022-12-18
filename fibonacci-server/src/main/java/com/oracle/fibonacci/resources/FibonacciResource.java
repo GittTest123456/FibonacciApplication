@@ -1,7 +1,7 @@
 package com.oracle.fibonacci.resources;
 
 import com.codahale.metrics.annotation.Timed;
-import com.oracle.fibonacci.api.Sequence;
+import com.oracle.fibonacci.model.SequenceResponse;
 import com.oracle.fibonacci.util.Calculator;
 import io.dropwizard.jersey.params.IntParam;
 
@@ -21,7 +21,7 @@ public class FibonacciResource {
     @GET
     @Timed
     @Consumes(MediaType.APPLICATION_JSON)
-    public Sequence getPayload(@QueryParam("elements") @NotNull @Min(1) @Max(100) IntParam num) {
+    public SequenceResponse getPayload(@QueryParam("elements") @NotNull @Min(1) @Max(100) IntParam num) {
         return Calculator.getFibonacci(num.get());
     }
 }

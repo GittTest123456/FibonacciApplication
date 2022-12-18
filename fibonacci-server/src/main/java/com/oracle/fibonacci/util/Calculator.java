@@ -1,6 +1,6 @@
 package com.oracle.fibonacci.util;
 
-import com.oracle.fibonacci.api.Sequence;
+import com.oracle.fibonacci.model.SequenceResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.Stack;
 
 public class Calculator {
 
-    public static Sequence getFibonacci(Integer num) {
+    public static SequenceResponse getFibonacci(Integer num) {
         Stack<Integer> odds = new Stack<>();
         Stack<Integer> evens = new Stack<>();
         List<Integer> sequence = new ArrayList<>();
@@ -31,7 +31,7 @@ public class Calculator {
             curr_minus_1 = curr;
             curr = curr_minus_2 + curr_minus_1;
         };
-        return new Sequence(sequence, mergeLists(odds, evens));
+        return new SequenceResponse(sequence, mergeLists(odds, evens));
     }
 
     private static List<Integer> mergeLists(Stack<Integer> odds, Stack<Integer> evens) {

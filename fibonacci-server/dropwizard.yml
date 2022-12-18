@@ -1,4 +1,3 @@
-template: Fibonacci
 server:
   applicationConnectors:
     - type: http
